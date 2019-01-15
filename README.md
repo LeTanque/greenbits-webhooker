@@ -5,14 +5,14 @@ Greenbits is a point of sale terminal and backoffice software developer specific
 
 In October 2018, Greenbits release API specs, available at the link below.
 
-[https://developer.greenbits.com/v1/#menu-feed](Greenbits API specs)
+[Greenbits API specs](https://developer.greenbits.com/v1/#menu-feed)
 
 ## Tools
 This project was the first time I had ever worked with a webhook API. So, please ignore this part if you've done this work before and don't need any help setting up a dev environment. 
 
-[https://ngrok.io](Ngrok.io tunneling tool)
+[Ngrok.io tunneling tool](https://ngrok.io)
 
-[https://webhook.site](Webhook.site HTTP request inspector)
+[Webhook.site HTTP request inspector](https://webhook.site)
 
 XAMPP (or equivalent) local development environment.
 
