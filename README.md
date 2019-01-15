@@ -1,5 +1,5 @@
 # greenbits-webhooker
-Greenbits (POS) webhook/websocket API PHP processing script
+__Greenbits (POS) webhook/websocket API PHP processing script__
 
 Greenbits is a point of sale terminal and backoffice software developer specifically for the cannabis industry. Dispensaries use Greenbits for their sales terminals and inventory systems. Greenbits syncs with the CA state-mandated track and trace program (I believe it's called Metrc). 
 
