@@ -6,8 +6,8 @@
   </head>
   <body>
 <?php
-include 'conpdo.php';
-$pdo=OpenCon();
+include 'conpdo.php';  // This is your 'connect to db file'. Plenty of templates are available which you tune to your needs. 
+$pdo=OpenCon(); // Open connection to the database using $pdo, which is passed to this script from conpdo.php.  Make sure to close the connection at the end.
 
 // Meet this condition and end. Don't meet it, continue on to processing payload
 try {
@@ -23,9 +23,9 @@ try {
 
 echo 'Heads up!';
 
-// Decode json into events
+// Assign events to the decoded json.
 $events = json_decode(utf8_decode($json), true);
-// All your headers are belong to me
+// All your headers are belong to me. Not really necessary. 
 $headers = getallheaders();
 $item_availability = $headers['X-Gb-Eventname'];
 //////////////////////////////////////////////////////
@@ -33,7 +33,8 @@ $item_availability = $headers['X-Gb-Eventname'];
 // Add each distinct brand to a brand table. Don't add NULL brand. Don't duplicate entries
 // Add the automatically generated buid from the table brands to product table
 // Add the image column
-// create the image name from the full name, lowercased, minus spaces and minus apostrophes. Should probably sanitize further
+// create the image name from the full name, lowercased, minus spaces and minus apostrophes. Could sanitize further.
+// Images are pulled from a folder and the file name/db reference align with the HTML/CSS template.
 $add_brand_event=$pdo->prepare(" 
 	INSERT INTO brands (brand)
 	SELECT DISTINCT (brand)
@@ -80,6 +81,8 @@ $remove_id_event->bindParam(':id_product', $id_product, PDO::PARAM_STR, 75);
 
 // Removes all items with given group_id, then attempts to cross reference the menugroups table 
 // and remove all entries that have a group_id NOT in the filter_group_id column
+// I commented this out at some point during testing, but I didn't document why
+// Definitely works without; left here for completeness.
 // $remove_menugroup_event=$pdo->prepare("
 // 	DELETE FROM lhshooker 
 // 	WHERE group_id=:group_id;

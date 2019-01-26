@@ -17,9 +17,11 @@ This project was the first time I had ever worked with a webhook API. So, please
 XAMPP (or equivalent) local development environment.
 
 ## Implementation
-My implementation is probably different than what a lot of other (likely better) devs would do. What I did was received the webhooks with a PHP script and then organize that data into an SQL database. Then the site pulls information from the SQL database to present to users.
+My implementation is probably different than what a lot of other devs would do. What I did was received the webhooks with a PHP script and then organize that data into an SQL database. Then the site pulls information from the SQL database to present to users.
+
+As an update, this script has been used in production for 3 months as of today, and has functioned marvelously. Has even managed to handle some outlier situations that I didn't explicitly prepare for.
 
 ## Contact
-If you are working on a similiar project and would like some input, help, whatever, please reach out to me. I'm glad to help.
+If you are working on a similiar project and would like some input, help, whatever, please reach out to me. I'm glad to help!
 
 * get (at) frank3 (dot) me
